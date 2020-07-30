@@ -10,7 +10,7 @@
 <body>
     <div class="container-calendary">
         <div class="content-calendary">            
-            <div class="calendary__input">
+            <div class="calendary__input none">
                 <h1 class="h1__input">Ingrese la actividad</h1>
                 <form action="" method="post" id="form">
                     <div class="input__content">
@@ -39,29 +39,24 @@
                     <input type="text" class="input input__text" name="search" >                                                
                 </div>               
                 <table class="table">
-                    <thead class="table__thead">
-                        <tr class="tr__theadr">
+                    <!-- <thead class="table__thead">
+                        <tr class="tr__thead">
                         <td>Codigo</td>
                         <td>Actividad</td>
                         <td>Fecha</td>
                         </tr>
-                    </thead>
+                    </thead> -->
                     <tbody class="table__tbody">
                         <tr class="tr__tbody">
-                        <td>1</td>
-                        <td>deporte</td>
-                        <td>01/04/2020</td>
-                        </tr>                        
+                        <td data-codigo="1" >1</td>
+                        <td data-codigo="deporte" >deporte</td>
+                        <td data-codigo="01/04/2020" >01/04/2020</td>
+                        </tr>    
                         <tr class="tr__tbody">
-                            <td>1</td>
-                            <td>deporte</td>
-                            <td>01/04/2020</td>
-                        </tr>
-                        <tr class="tr__tbody">
-                            <td>1</td>
-                            <td>deporte</td>
-                            <td>01/04/2020</td>
-                        </tr>
+                            <td class="td__tbody" data-codigo="1" >1</td>
+                            <td class="td__tbody" data-codigo="deporte" >deporte</td>
+                            <td class="td__tbody" data-codigo="01/04/2020" >01/04/2020</td>
+                        </tr>                                             
                     </tbody>                    
                 </table>
             </div>

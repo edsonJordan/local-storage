@@ -34,9 +34,27 @@ body{
 
 /* Tabla */
 .table{
-margin: 0 auto;
-background-color: red;
+margin: .9rem auto;
+
 }
-.table__thead{
-    
+.table__thead{    
+    display: grid;
+   
+}
+.tr__tbody{    
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)) ;     
+    row-gap: .9rem;    
+    columns: .9rem;    
+    margin: .9rem auto;
+    padding: 2rem 0;
+    border-radius: 10px;
+    border: .1em solid #D9DBDF;    
+}
+.td__tbody::after{
+    content: "";
+    display: block;
+}
+.none{
+    display: none;
 }
