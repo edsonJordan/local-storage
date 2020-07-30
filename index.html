@@ -4,17 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crud en localstorage</title>dgdg
+    <title>Crud en localstorage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container-calendary">
         <div class="content-calendary">            
-            <div class="calendary--input">
-                <h1 class="calendary__input">Ingrese la actividad a realizar</h1>
+            <div class="calendary__input">
+                <h1 class="h1__input">Ingrese la actividad</h1>
+                <form action="" method="post" id="form">
+                    <div class="input__content">
+                        <label for="" class="input-label">
+                            Ingresa actividad
+                        </label>
+                        <input type="text" class="input input__text" name="actividad" >
+                    </div>
+                    <div class="input__content">
+                        <label for="" class="input-label">
+                            Ingresa Fecha
+                        </label>
+                        <input type="datetime-local" class="input input__date" name="actividad" >                                                
+                    </div>
+                    <div class="input__content">
+                        <input type="submit" class="input input__submit" value="Eviar">
+                    </div>
+                </form>
             </div>
-            <div class="calendary--view">
-                <h1 class="calendary__view">Busca tu actividad</h1>
+            <div class="calendary__view">
+                <h1 class="h1__input">Busca tu actividad</h1> 
+                <div class="input__content">
+                    <label for="" class="input-label">
+                        Ingresa Fecha
+                    </label>
+                    <input type="text" class="input input__text" name="search" >                                                
+                </div>               
+                <table class="table">
+                    <thead class="table__thead">
+                        <tr class="tr__theadr">
+                        <td>Codigo</td>
+                        <td>Actividad</td>
+                        <td>Fecha</td>
+                        </tr>
+                    </thead>
+                    <tbody class="table__tbody">
+                        <tr class="tr__tbody">
+                        <td>1</td>
+                        <td>deporte</td>
+                        <td>01/04/2020</td>
+                        </tr>                        
+                        <tr class="tr__tbody">
+                            <td>1</td>
+                            <td>deporte</td>
+                            <td>01/04/2020</td>
+                        </tr>
+                        <tr class="tr__tbody">
+                            <td>1</td>
+                            <td>deporte</td>
+                            <td>01/04/2020</td>
+                        </tr>
+                    </tbody>                    
+                </table>
             </div>
         </div>
     </div>
