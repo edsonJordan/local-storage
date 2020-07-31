@@ -116,6 +116,16 @@ margin: .9rem auto;
 }
 
 /* Radio pagination foot */
+.foot_form_pagination{
+    margin-bottom: 1.5rem;
+}
 .radio-pagination-foot{
     display: none;
+}
+.label-pagination-foot{
+    margin: .4em;
+    width: 220px;
+    padding: .3em;
+    color: gray;
+    border:1px solid gray;
 }

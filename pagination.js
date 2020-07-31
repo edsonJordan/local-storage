@@ -20,7 +20,7 @@ class Pagination{
 /* AGREGANDO ATRIBUTOS A LABEL */
             nodechild.setAttribute('id', date);
             nodelabel.setAttribute('for', date)
-            nodelabel.classList.add('label-pagination')
+            nodelabel.classList.add('label-pagination-foot')
             nodelabel.textContent = date;
             fragment.appendChild(nodelabel)
             fragment.appendChild(nodechild)
