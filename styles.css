@@ -123,9 +123,12 @@ margin: .9rem auto;
     display: none;
 }
 .label-pagination-foot{
-    margin: .4em;
-    width: 220px;
+    margin: .4em;    
     padding: .3em;
     color: gray;
     border:1px solid gray;
+}
+.label-pagination-foot .active{
+    background-color: gray;
+    color: white;
 }
