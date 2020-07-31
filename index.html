@@ -10,7 +10,8 @@
 <body>
     <div class="container-calendary">
         <div class="content-calendary">            
-            <div class="calendary__input ">
+            <div class="calendary__input none 
+            ">
                 <h1 class="h1__input">Ingrese la actividad</h1>
                 <form action="" method="post" id="form">
                     <div class="input__content">
@@ -45,24 +46,42 @@
                         <td>Actividad</td>
                         <td>Fecha</td>
                         </tr>
-                    </thead> -->
+                    </thead> -->                   
+                    <input type="checkbox" class="check_pagination" name="" id="div_table_pagination">
+                    <label for="div_table_pagination" class="label__pagination"></label>
+                    <div class="table_pagination">  
+                        <input type="radio" checked name="radio_group" class="radio_pagination radio_pagination_five" data-radio="5" id="radio_five">
+                        <input type="radio" name="radio_group" class="radio_pagination radio_pagination_ten" data-radio="10" id="radio_ten">
+                        <input type="radio" name="radio_group" class="radio_pagination radio_pagination_fifty" data-radio="50" id="radio_fifty">
+                        <input type="radio" name="radio_group" class="radio_pagination radio_pagination_onehundred" data-radio="100" id="radio_onehundred">                                          
+                    <label for="radio_five" class="label__radio__pagination label__pagination__five" data-cantidad="5" ></label>
+                    <label for="radio_ten" class="label__radio__pagination label__pagination__ten" data-cantidad="10"></label>
+                    <label for="radio_fifty" class="label__radio__pagination label__pagination__fifty" data-cantidad="50" ></label>
+                    <label for="radio_onehundred" class="label__radio__pagination label__pagination__onehundred" data-cantidad="100" ></label>                    
+                  </div>
                     <tbody class="table__tbody">
                         <tr class="tr__tbody">
-                        <td data-codigo="1" >1</td>
-                        <td data-codigo="deporte" >deporte</td>
-                        <td data-codigo="01/04/2020" >01/04/2020</td>
+                        <td class="td__tbody" data-titulo="codigo" >1</td>
+                        <td class="td__tbody" data-titulo="deporte" >boley</td>
+                        <td class="td__tbody" data-titulo="fecha" >01/04/2020</td>
                         </tr>    
-                        <tr class="tr__tbody">
-                            <td class="td__tbody" data-codigo="1" >1</td>
-                            <td class="td__tbody" data-codigo="deporte" >deporte</td>
-                            <td class="td__tbody" data-codigo="01/04/2020" >01/04/2020</td>
-                        </tr>                                             
-                    </tbody>                    
+                   <!--      <tr class="tr__tbody">
+                            <td class="td__tbody" data-titulo="codigo" >1</td>
+                            <td class="td__tbody" data-titulo="deporte" >futbol</td>
+                            <td class="td__tbody" data-titulo="fecha" >01/04/2020</td>
+                        </tr>   -->                                           
+                    </tbody>                                  
                 </table>
+                <tfoot class="tabe__tfoot__count"  >
+                    <form action="" id="foot_form_pagination">
+                          
+                    </form>
+                    
+                </tfoot>   
             </div>
         </div>
     </div>
-    
+    <script src="pagination.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
