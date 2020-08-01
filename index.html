@@ -50,14 +50,17 @@
                     <input type="checkbox" class="check_pagination" name="" id="div_table_pagination">
                     <label for="div_table_pagination" class="label__pagination"></label>
                     <div class="table_pagination">  
-                        <input type="radio" checked name="radio_group" class="radio_pagination radio_pagination_five" data-radio="5" id="radio_five">
-                        <input type="radio" name="radio_group" class="radio_pagination radio_pagination_ten" data-radio="10" id="radio_ten">
-                        <input type="radio" name="radio_group" class="radio_pagination radio_pagination_fifty" data-radio="50" id="radio_fifty">
-                        <input type="radio" name="radio_group" class="radio_pagination radio_pagination_onehundred" data-radio="100" id="radio_onehundred">                                          
-                    <label for="radio_five" class="label__radio__pagination label__pagination__five" data-cantidad="5" ></label>
-                    <label for="radio_ten" class="label__radio__pagination label__pagination__ten" data-cantidad="10"></label>
-                    <label for="radio_fifty" class="label__radio__pagination label__pagination__fifty" data-cantidad="50" ></label>
-                    <label for="radio_onehundred" class="label__radio__pagination label__pagination__onehundred" data-cantidad="100" ></label>                    
+                        <form action="" id="header_form_pagination">
+                            <input type="radio" name="radio_group" value="5" class="radio_pagination radio_pagination_five" data-radio="5" id="radio_five">
+                                <input type="radio" name="radio_group" value="10" class="radio_pagination radio_pagination_ten" data-radio="10" id="radio_ten">
+                                <input type="radio" name="radio_group" value="50" class="radio_pagination radio_pagination_fifty" data-radio="50" id="radio_fifty">
+                                <input type="radio" name="radio_group" value="100" class="radio_pagination radio_pagination_onehundred" data-radio="100" id="radio_onehundred">                                                                          
+                                <label for="radio_five" class="label__radio__pagination label__pagination__five" data-cantidad="5" ></label>
+                                <label for="radio_ten" class="label__radio__pagination label__pagination__ten" data-cantidad="10"></label>
+                                <label for="radio_fifty" class="label__radio__pagination label__pagination__fifty" data-cantidad="50" ></label>
+                                <label for="radio_onehundred" class="label__radio__pagination label__pagination__onehundred" data-cantidad="100" ></label>                                                                                                        
+                        </form>
+                                
                   </div>
                     <tbody class="table__tbody">
                         <tr class="tr__tbody">
@@ -73,8 +76,8 @@
                     </tbody>                                  
                 </table>
                 <tfoot class="tabe__tfoot__count"  >
-                    <form action="" id="foot_form_pagination" class="foot_form_pagination">
-                          
+                    <form action="" id="foot_form_pagination" class="foot_form_pagination">                          
+                       
                     </form>                    
                 </tfoot>   
             </div>

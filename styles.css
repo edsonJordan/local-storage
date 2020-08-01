@@ -117,18 +117,23 @@ margin: .9rem auto;
 
 /* Radio pagination foot */
 .foot_form_pagination{
-    margin-bottom: 1.5rem;
+    display: inline-flex;            
+    margin-bottom: 1.5rem;    
+}
+.radio-pagination-foot:checked + .label-pagination-foot{
+    background-color: gray;
+    color: white;
 }
 .radio-pagination-foot{
     display: none;
 }
 .label-pagination-foot{
-    margin: .4em;    
+    margin: .4em;
     padding: .3em;
     color: gray;
     border:1px solid gray;
 }
-.label-pagination-foot .active{
-    background-color: gray;
-    color: white;
+
+.label-pagination-foot.active{
+    
 }
