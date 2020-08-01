@@ -10,8 +10,7 @@
 <body>
     <div class="container-calendary">
         <div class="content-calendary">            
-            <div class="calendary__input none 
-            ">
+            <div class="calendary__input none">
                 <h1 class="h1__input">Ingrese la actividad</h1>
                 <form action="" method="post" id="form">
                     <div class="input__content">
@@ -31,7 +30,7 @@
                     </div>
                 </form>
             </div>
-            <div class="calendary__view">
+            <div class="calendary__view" id="calendary__view" >
                 <h1 class="h1__input">Busca tu actividad</h1> 
                 <div class="input__content">
                     <label for="" class="input-label">
@@ -49,19 +48,16 @@
                     </thead> -->                   
                     <input type="checkbox" class="check_pagination" name="" id="div_table_pagination">
                     <label for="div_table_pagination" class="label__pagination"></label>
-                    <div class="table_pagination">  
-                        <form action="" id="header_form_pagination">
-                            <input type="radio" name="radio_group" value="5" class="radio_pagination radio_pagination_five" data-radio="5" id="radio_five">
+                    <div id="table_pagination" class="table_pagination">                          
+                                <input type="radio" name="radio_group" value="5" class="radio_pagination radio_pagination_five" data-radio="5" id="radio_five">
                                 <input type="radio" name="radio_group" value="10" class="radio_pagination radio_pagination_ten" data-radio="10" id="radio_ten">
                                 <input type="radio" name="radio_group" value="50" class="radio_pagination radio_pagination_fifty" data-radio="50" id="radio_fifty">
                                 <input type="radio" name="radio_group" value="100" class="radio_pagination radio_pagination_onehundred" data-radio="100" id="radio_onehundred">                                                                          
                                 <label for="radio_five" class="label__radio__pagination label__pagination__five" data-cantidad="5" ></label>
                                 <label for="radio_ten" class="label__radio__pagination label__pagination__ten" data-cantidad="10"></label>
                                 <label for="radio_fifty" class="label__radio__pagination label__pagination__fifty" data-cantidad="50" ></label>
-                                <label for="radio_onehundred" class="label__radio__pagination label__pagination__onehundred" data-cantidad="100" ></label>                                                                                                        
-                        </form>
-                                
-                  </div>
+                                <label for="radio_onehundred" class="label__radio__pagination label__pagination__onehundred" data-cantidad="100" ></label>                                                                                                                                                                
+                    </div>
                     <tbody class="table__tbody">
                         <tr class="tr__tbody">
                         <td class="td__tbody" data-titulo="codigo" >1</td>

@@ -13,7 +13,7 @@ body{
 }
 .calendary__input, .calendary__view{    
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px;    
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
     min-width: 150px;         
 }
@@ -42,7 +42,8 @@ margin: .9rem auto;
     flex-direction: column;  
     border-radius: 15px;
     margin-bottom: .5rem;
-    border: .1em solid #D9DBDF;
+    /* border: .1em solid #D9DBDF; */
+    border: 1px solid red;
     padding: 2rem 3.5rem ;
 }
 .td__tbody::before{

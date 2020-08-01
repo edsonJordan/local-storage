@@ -1,9 +1,11 @@
 export class Pagination
-{ 
-    
-    constructor(pagination, seudopaginate){
+{     
+    constructor(pagination, seudopaginate, parameters_paginate, parameters_header, parameters_footer){
     this.pagination = pagination
     this.seudopaginate =seudopaginate
+    this.parameters_paginate  = parameters_paginate;
+    this.parameters_header = parameters_header;
+    this.parameters_footer = parameters_footer;
     }
     set_pagination(array = []){
         this.pagination = array;
@@ -13,6 +15,27 @@ export class Pagination
     }
     get_id(node){
         return document.getElementById(node);        
+    }
+    /* encapsulate parameters header */
+    set_parameters_header(header_paginate){
+        this.parameters_header= header_paginate;        
+    }
+    get_parameters_header(){
+        return this.parameters_header;
+    }
+    /* encapsulate parameters footer */
+    set_parameters_footer(footer_paginate){
+        this.parameters_footer= footer_paginate;        
+    }
+    get_parameters_footer(){
+        return this.parameters_footer;
+    }
+    /* encapsulate parameters general[header, footer] */
+    set_paremeters_paginate(header, footer){
+        this.parameters_paginate = [header, footer];
+    }
+    get_paremeters_paginate(){
+        return this.parameters_paginate;
     }
     /* Add nodechild */
     add_childnode_radio_paginatio(node, array, child, attibute, type, name){
@@ -36,30 +59,26 @@ export class Pagination
         }
         return node.appendChild(fragment);
     }
-    /*  
-    set_seudopaginate(before_radio, before_label, after_radio, after_label){
-        this.seudopaginate={before_radio : [before_radio], before_label : [before_label],
-             after_radio : [after_radio], after_label: [after_label]};               
-    }
-    get_seudopaginate(){
-        return this.seudopaginate; 
-    }
-    action_seudopaginate(action = []){
-        console.log(action.before_radio, action.before_label,
-            action.after_radio, action.after_label  );                
-    }*/
-
-    clicklistenerinput(node){        
+    /* Listener event from node */
+    clicklistenerinput(node, section){        
         node.addEventListener('click', (e) => {                  
-            const targe  = e.target                    
+            const targe  = e.target                                 
         if(targe.nodeName === 'INPUT'){            
             this.set_pagination(targe.value)                                     
-            return console.log(this.get_pagination());   
-        }                               
-        
-                            
-        }  )    
-        
+        return console.log({ [section] : parseInt(this.get_pagination()) });   
+        }                                                                   
+        })  
+                
+    }
+    /* Search radio checked from radio group */
+    search_checked_radio(name_input){
+        const search = document.getElementsByName(name_input);
+        for(const data of search){
+                if(data.checked){
+                    return data.value;
+                break;
+                }
+            }
     }
 
 }
