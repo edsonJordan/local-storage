@@ -1,12 +1,20 @@
 export class Pagination
 {     
-    constructor(pagination, seudopaginate, parameters_paginate, parameters_header, parameters_footer){
+    constructor(pagination, value_paginate, parameters_paginate, parameters_header, parameters_footer){
     this.pagination = pagination
-    this.seudopaginate =seudopaginate
+    this.value_paginate =value_paginate
     this.parameters_paginate  = parameters_paginate;
     this.parameters_header = parameters_header;
     this.parameters_footer = parameters_footer;
     }
+    /* Encapsulate value_paginate */
+    set_value_paginate(value){
+        this.value_paginate = value;
+    }
+    get_value_paginate(value){
+        return this.value_paginate;
+    }
+    /* Encapsulate parameters pagination */
     set_pagination(array = []){
         this.pagination = array;
     }
@@ -32,12 +40,12 @@ export class Pagination
     }
     /* encapsulate parameters general[header, footer] */
     set_paremeters_paginate(header, footer){
-        this.parameters_paginate = [header, footer];
+        this.parameters_paginate = {header, footer};
     }
     get_paremeters_paginate(){
         return this.parameters_paginate;
     }
-    /* Add nodechild */
+    /* Add nodechild -- radio and label ---*/
     add_childnode_radio_paginatio(node, array, child, attibute, type, name){
     const fragment = document.createDocumentFragment()
         for(const date of array){        
@@ -51,7 +59,7 @@ export class Pagination
             /*ADD  ATTIBUTE  RADIO */            
             nodechild.setAttribute(attibute, date);            
             nodechild.setAttribute('type', type);
-            nodechild.setAttribute('name', name);            
+            nodechild.setAttribute('name', 'group_footer');            
             nodechild.classList.add('radio-pagination-foot')            
             nodechild.setAttribute('id', 'radio-pagination-foot-'+date);
             fragment.appendChild(nodechild)
@@ -59,16 +67,41 @@ export class Pagination
         }
         return node.appendChild(fragment);
     }
+    /* Add node cards*/
+    add_child_card(node,array, child, clas){
+        const fragment = document.createDocumentFragment()
+        for(const data of array){
+            const nodechild = document.createElement(child);
+            nodechild.classList.add(clas);
+            nodechild.setAttribute('data-titulo', data.titulo)        
+            fragment.appendChild(nodechild)
+        }
+        return node.appendChild(fragment);
+        
+    }
+
     /* Listener event from node */
     clicklistenerinput(node, section){        
-        node.addEventListener('click', (e) => {                  
-            const targe  = e.target                                 
-        if(targe.nodeName === 'INPUT'){            
-            this.set_pagination(targe.value)                                     
-        return console.log({ [section] : parseInt(this.get_pagination()) });   
-        }                                                                   
-        })  
-                
+        node.addEventListener('change', (e) => {                  
+        const targe  = e.target                                                     
+        this.set_pagination(targe.value) 
+        let value = targe.value;
+        this.set_value_paginate(value);        
+        console.log({ [section] : parseInt(this.get_pagination()) });                                                                             
+        })                          
+    }
+
+    /* Listener Group radio */
+    listener_radio(id_listener, name_opposite_form, boolean){
+        id_listener.addEventListener('change', (e)=>{
+        const oppsite = this.search_checked_radio(name_opposite_form);
+        if(boolean){
+           this.set_paremeters_paginate(parseInt(e.target.value), parseInt(oppsite));
+        }else{
+            this.set_paremeters_paginate(parseInt(oppsite), parseInt(e.target.value));
+        }
+        console.log(this.get_paremeters_paginate());        
+        })
     }
     /* Search radio checked from radio group */
     search_checked_radio(name_input){
@@ -80,5 +113,4 @@ export class Pagination
                 }
             }
     }
-
 }
