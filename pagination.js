@@ -68,16 +68,22 @@ export class Pagination
         return node.appendChild(fragment);
     }
     /* Add node cards*/
-    add_child_card(node,array, child, clas){
-        const fragment = document.createDocumentFragment()
-        for(const data of array){
+    add_child_grandchild(array_data, node, child, class_child, grand_child, class_grandchild){
+        const nodefirst = this.get_id(node);
+        const fragment = document.createDocumentFragment();
+        for(const data of array_data){
             const nodechild = document.createElement(child);
-            nodechild.classList.add(clas);
-            nodechild.setAttribute('data-titulo', data.titulo)        
-            fragment.appendChild(nodechild)
+            nodechild.classList.add(class_child)
+            for(const key of Object.entries(data)){
+                const nodegrandchild = document.createElement(grand_child);
+                nodegrandchild.classList.add(class_grandchild);
+                nodegrandchild.setAttribute('data-titulo', key[0]);
+                nodegrandchild.textContent= key[1];
+                nodechild.appendChild(nodegrandchild);
+            }
+            fragment.appendChild(nodechild);
         }
-        return node.appendChild(fragment);
-        
+        nodefirst.appendChild(fragment);
     }
 
     /* Listener event from node */
@@ -90,7 +96,6 @@ export class Pagination
         console.log({ [section] : parseInt(this.get_pagination()) });                                                                             
         })                          
     }
-
     /* Listener Group radio */
     listener_radio(id_listener, name_opposite_form, boolean){
         id_listener.addEventListener('change', (e)=>{
