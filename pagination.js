@@ -1,12 +1,36 @@
 export class Pagination
 {     
-    constructor(pagination, value_paginate, parameters_paginate, parameters_header, parameters_footer, data){
+    constructor(count_array,pagination, count_paginate, value_paginate, parameters_paginate, parameters_header, parameters_footer, data){    
+    this.count_array = count_array;
+    this.count_paginate = count_paginate;
     this.data = data
     this.pagination = pagination
     this.value_paginate =value_paginate
     this.parameters_paginate  = parameters_paginate;
     this.parameters_header = parameters_header;
     this.parameters_footer = parameters_footer;
+    }
+    /* Clear node */
+    clear_node(data){
+        let tbody = this.get_id(data)
+        //tbody.innerHTML= '' ;
+        while (tbody.firstChild) {
+            tbody.firstChild.remove();
+        }
+    }
+    /* Encapsulate count paginate footer */
+    set_count_paginate(data){
+        this.count_paginate = data;
+    }
+    get_count_paginate(){
+        return this.count_paginate;
+    }
+    /* Encapsulate count arrays */
+    set_count_array(data){
+        this.count_array=data;
+    }
+    get_count_array(){
+        return this.count_array;
     }
     /* Encapsulate value array */
     set_data(array){
@@ -101,23 +125,31 @@ export class Pagination
            this.set_paremeters_paginate(parseInt(e.target.value), parseInt(oppsite));
         }else{
             this.set_paremeters_paginate(parseInt(oppsite), parseInt(e.target.value));
+        }   
+       
+        if(e.target.name === 'group_header'){
+        this.clear_node('foot_form_pagination');
+        /*console.log(e.target.value);
+        console.log(this.get_count_array().length); */
+        //console.log(Math.ceil(parseInt(this.get_count_array().length)/ (e.target.value)));                        
+        let array_footer_paginate = [];
+        for(let i = 1; i <= Math.ceil(parseInt(this.get_count_array().length)/ (e.target.value)) ; i++){                        
+            array_footer_paginate.push(i)
         }
-        //console.log(this.get_data());    
-        //let parameters = this.get_paremeters_paginate();
-        //console.log(this.clear_array_search());
-        //console.log(this.clear_array_search({header: 5, footer: 4}));
-        let tbody = this.get_id('table_tbody')
-        //tbody.innerHTML= '' ;
-        while (tbody.firstChild) {
-            tbody.firstChild.remove();
-        }
-        //myNode.removeChild(myNode.lastChild);
+        //console.log(array_footer_paginate);
+        const form_pagination__footer = this.get_id('foot_form_pagination');               
+        this.add_childnode_radio_paginatio(form_pagination__footer, array_footer_paginate, "input", 'value', 'radio', 'group-pagination');        
+        }else{
+        //clear node
+        this.clear_node('table_tbody');
+        //add parameters
         let parameters = this.get_paremeters_paginate();                
         //console.log(this.clear_array_search(parameters.header, parameters.footer));
         const arraycleaned = this.clear_array_search(parameters.header, parameters.footer);                
-        this.add_child_grandchild(arraycleaned, 'table_tbody', 'tr', 'tr__tbody', 'td', 'td__tbody');                
-        /* let arraycleaned = this.clear_array_search(parameters);
-        console.log(arraycleaned); */                
+        // add cards
+        this.add_child_grandchild(arraycleaned, 'table_tbody', 'tr', 'tr__tbody', 'td', 'td__tbody'); 
+        }        
+                                
         })
     }
     /* Search radio checked from radio group */
