@@ -29,7 +29,26 @@ const array_cards=
 {codigo: 16, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 17, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 18, deporte: 'beisbol', fecha :'01/04/2020'}, 
-{codigo: 19, deporte: 'boley', fecha :'01/04/2020'}]
+{codigo: 19, deporte: 'boley', fecha :'01/04/2020'},
+{codigo: 20, deporte: 'gimnasia', fecha :'02/04/2020'}, 
+{codigo: 21, deporte: 'baloncesto', fecha :'01/04/2020'}, 
+{codigo: 22, deporte: 'futbol', fecha :'01/04/2020'}, 
+{codigo: 23, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 24, deporte: 'boley', fecha :'01/04/2020'},
+{codigo: 25, deporte: 'gimnasia', fecha :'02/04/2020'}, 
+{codigo: 26, deporte: 'baloncesto', fecha :'01/04/2020'}, 
+{codigo: 27, deporte: 'futbol', fecha :'01/04/2020'}, 
+{codigo: 28, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 29, deporte: 'boley', fecha :'01/04/2020'},
+{codigo: 30, deporte: 'boley', fecha :'01/04/2020'},
+{codigo: 31, deporte: 'gimnasia', fecha :'02/04/2020'}, 
+{codigo: 32, deporte: 'baloncesto', fecha :'01/04/2020'}, 
+{codigo: 33, deporte: 'futbol', fecha :'01/04/2020'}, 
+{codigo: 34, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 35, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 37, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 38, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 39, deporte: 'boley', fecha :'01/04/2020'}]
 /* Setting array for set_data */
 class_pagination.set_data(array_cards);
 class_pagination.set_count_array(array_cards);
