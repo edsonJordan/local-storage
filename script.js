@@ -9,6 +9,7 @@ const form_pagination__header = class_pagination.get_id('table_pagination');
 const form_pagination__footer = class_pagination.get_id('foot_form_pagination');
 /* Get id pagination first */
 const array_pagination = [1, 2, 3, 4, 5];
+
 const array_cards= 
 [
 {codigo: 1, deporte: 'gimnasia', fecha :'02/04/2020'}, 
@@ -29,12 +30,12 @@ const array_cards=
 {codigo: 16, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 17, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 18, deporte: 'beisbol', fecha :'01/04/2020'}, 
-{codigo: 19, deporte: 'boley', fecha :'01/04/2020'},
-{codigo: 20, deporte: 'boley', fecha :'01/04/2020'}]
+{codigo: 19, deporte: 'boley', fecha :'01/04/2020'}]
 /* Setting array for set_data */
 class_pagination.set_data(array_cards);
 
-//console.log(array_cards);
+console.log(array_cards.length);
+
 /* add child nodes for form_pagination */
 class_pagination.add_childnode_radio_paginatio(form_pagination__footer, array_pagination, "input", 'value', 'radio', 'group-pagination');
 /* GET ID first radio and  add attribute check in header */

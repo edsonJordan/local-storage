@@ -93,16 +93,6 @@ export class Pagination
         }
         nodefirst.appendChild(fragment);
     }
-    /* Listener event from node */
-    clicklistenerinput(node, section){        
-        node.addEventListener('change', (e) => {                  
-        const targe  = e.target                                                     
-        this.set_pagination(targe.value) 
-        let value = targe.value;
-        this.set_value_paginate(value);        
-        console.log({ [section] : parseInt(this.get_pagination()) });                                                                             
-        })                          
-    }
     /* Listener Group radio */
     listener_radio(id_listener, name_opposite_form, boolean){
         id_listener.addEventListener('change', (e)=>{
@@ -117,7 +107,11 @@ export class Pagination
         //console.log(this.clear_array_search());
         //console.log(this.clear_array_search({header: 5, footer: 4}));
         let tbody = this.get_id('table_tbody')
-        tbody.innerHTML= '' ;
+        //tbody.innerHTML= '' ;
+        while (tbody.firstChild) {
+            tbody.firstChild.remove();
+        }
+        //myNode.removeChild(myNode.lastChild);
         let parameters = this.get_paremeters_paginate();                
         //console.log(this.clear_array_search(parameters.header, parameters.footer));
         const arraycleaned = this.clear_array_search(parameters.header, parameters.footer);                
