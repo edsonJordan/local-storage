@@ -20,12 +20,20 @@ const array_cards=
 {codigo: 7, deporte: 'baloncesto', fecha :'01/04/2020'}, 
 {codigo: 8, deporte: 'futbol', fecha :'01/04/2020'}, 
 {codigo: 9, deporte: 'beisbol', fecha :'01/04/2020'}, 
-{codigo: 10, deporte: 'boley', fecha :'01/04/2020'}]
+{codigo: 10, deporte: 'boley', fecha :'01/04/2020'},
+{codigo: 11, deporte: 'boley', fecha :'01/04/2020'},
+{codigo: 12, deporte: 'gimnasia', fecha :'02/04/2020'}, 
+{codigo: 13, deporte: 'baloncesto', fecha :'01/04/2020'}, 
+{codigo: 14, deporte: 'futbol', fecha :'01/04/2020'}, 
+{codigo: 15, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 16, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 17, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 18, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 19, deporte: 'boley', fecha :'01/04/2020'},
+{codigo: 20, deporte: 'boley', fecha :'01/04/2020'}]
+/* Setting array for set_data */
+class_pagination.set_data(array_cards);
 
-console.log(array_cards.slice(0,10))
-
-//ADD child node and grandchild node(Cards)  array, node, child, class_child, grandchild, class_grandchild
-class_pagination.add_child_grandchild(array_cards, 'table_tbody', 'tr', 'tr__tbody', 'td', 'td__tbody');
 //console.log(array_cards);
 /* add child nodes for form_pagination */
 class_pagination.add_childnode_radio_paginatio(form_pagination__footer, array_pagination, "input", 'value', 'radio', 'group-pagination');
@@ -39,8 +47,14 @@ const first_pagination = class_pagination.get_id('radio-pagination-foot-1');
 first_pagination.checked = true;
 /* Firt listener group header and footer */
 class_pagination.set_paremeters_paginate(parseInt(class_pagination.search_checked_radio('group_header')), parseInt(class_pagination.search_checked_radio('group_footer')));
-//console.log(class_pagination.get_paremeters_paginate());
 /*Event Listener group radio header  */
 class_pagination.listener_radio(form_pagination__header, 'group_footer', true);
 /*Event Listener group radio footer */
 class_pagination.listener_radio(form_pagination__footer, 'group_header', false);
+/* Getting */
+let parameters = class_pagination.get_paremeters_paginate()
+//array, header, footer
+let datacard= class_pagination.clear_array_search(parameters.header, parameters.footer)
+//ADD child node and grandchild node(Cards)  array, node, child, class_child, grandchild, class_grandchild
+class_pagination.add_child_grandchild(datacard, 'table_tbody', 'tr', 'tr__tbody', 'td', 'td__tbody');
+

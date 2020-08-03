@@ -1,11 +1,19 @@
 export class Pagination
 {     
-    constructor(pagination, value_paginate, parameters_paginate, parameters_header, parameters_footer){
+    constructor(pagination, value_paginate, parameters_paginate, parameters_header, parameters_footer, data){
+    this.data = data
     this.pagination = pagination
     this.value_paginate =value_paginate
     this.parameters_paginate  = parameters_paginate;
     this.parameters_header = parameters_header;
     this.parameters_footer = parameters_footer;
+    }
+    /* Encapsulate value array */
+    set_data(array){
+        this.data=array;
+    }
+    get_data(){
+        return this.data;
     }
     /* Encapsulate value_paginate */
     set_value_paginate(value){
@@ -85,7 +93,6 @@ export class Pagination
         }
         nodefirst.appendChild(fragment);
     }
-
     /* Listener event from node */
     clicklistenerinput(node, section){        
         node.addEventListener('change', (e) => {                  
@@ -105,7 +112,18 @@ export class Pagination
         }else{
             this.set_paremeters_paginate(parseInt(oppsite), parseInt(e.target.value));
         }
-        console.log(this.get_paremeters_paginate());        
+        //console.log(this.get_data());    
+        //let parameters = this.get_paremeters_paginate();
+        //console.log(this.clear_array_search());
+        //console.log(this.clear_array_search({header: 5, footer: 4}));
+        let tbody = this.get_id('table_tbody')
+        tbody.innerHTML= '' ;
+        let parameters = this.get_paremeters_paginate();                
+        //console.log(this.clear_array_search(parameters.header, parameters.footer));
+        const arraycleaned = this.clear_array_search(parameters.header, parameters.footer);                
+        this.add_child_grandchild(arraycleaned, 'table_tbody', 'tr', 'tr__tbody', 'td', 'td__tbody');                
+        /* let arraycleaned = this.clear_array_search(parameters);
+        console.log(arraycleaned); */                
         })
     }
     /* Search radio checked from radio group */
@@ -117,5 +135,13 @@ export class Pagination
                 break;
                 }
             }
+    }
+    /* Autoload for parameters of checks header and footer  */
+    clear_array_search(header, footer){        
+        let arraydirty = this.get_data();        
+        let end = footer * header;
+        let start = header * (footer-1);
+        let arraycleaned = arraydirty.slice(start, end);
+        return arraycleaned;       
     }
 }
