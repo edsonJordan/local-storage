@@ -32,24 +32,33 @@ body{
 }
 /* Table */
 .table{
-margin: .9rem auto;
+    display: block;    
+    margin: .9rem auto;    
+    
+    width: 195px;
+    max-height: 260px;
+    overflow-x: auto;
+    
+    
 }
-.table__thead{    
-    display: grid;  
+.table__tbody{
+    display: flex;                
+
 }
+
 .tr__tbody{    
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;      
     border-radius: 15px;
-    margin-bottom: .5rem;
+    margin: .5rem .8rem;    
     /* border: .1em solid #D9DBDF; */
-    border: 1px solid red;
-    padding: 2rem 3.5rem ;
+    border: 1px solid gray;
+    padding: 2rem 3rem ;
 }
 .td__tbody::before{
     display: flex;
     content: attr(data-titulo);    
-    justify-content: center;
+    justify-content: center;    
     margin-bottom: .5rem;
     margin-top: .8rem;
     color:gray;
