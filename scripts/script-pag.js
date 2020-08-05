@@ -51,12 +51,20 @@ const array_cards=
 {codigo: 37, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 38, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 39, deporte: 'beisbol', fecha :'01/04/2020'}, 
-{codigo: 40, deporte: 'boley', fecha :'01/04/2020'}]
+{codigo: 40, deporte: 'boley', fecha :'01/04/2020'}
+]
 /* Setting array for set_data */
 class_pagination.set_data(array_cards);
 class_pagination.set_count_array(array_cards);
+/* Add array clear */
+/* Paginate default  */
+const radio_header_paginate = 5;
+let array_footer_paginate = [];
+for(let i = 1; i <= Math.ceil(parseInt(class_pagination.get_count_array().length)/radio_header_paginate); i++){                        
+    array_footer_paginate.push(i)
+}
 /* add child radios nodes for form_pagination from footer  */
-class_pagination.add_childnode_radio_paginatio(form_pagination__footer, array_pagination, "input", 'value', 'radio', 'group-pagination');
+class_pagination.add_childnode_radio_paginatio(form_pagination__footer, array_footer_paginate, "input", 'value', 'radio', 'group-pagination');
 /* GET ID first radio and  add attribute check in header */
 const first_pagination_header = class_pagination.get_id('radio_five');          
 /* Action first radio header  checked */
