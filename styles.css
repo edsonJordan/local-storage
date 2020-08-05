@@ -123,30 +123,42 @@ body{
 .none{
     display: none;
 }
+/* Container tfoot radio */
+.table__tfoot__count{
+    margin: 0 auto;  
+    
+    width: 204px; 
+    overflow: unset; 
+    overflow-x: auto;  
+    
+
+    margin-bottom: 1.5rem;
+}
 
 /* Radio pagination foot */
 .foot_form_pagination{
     display: inline-flex;            
-    margin-bottom: 1.5rem;    
-}
-.foot_form_pagination::before{
-    display: block;
-    margin: auto ;
-    content: ' ';
-    width: .7rem;
-    height: .7rem;
-    border-bottom: 2px solid gray;
-    border-left: 2px solid gray;        
-    transform: rotate(45deg);
+    margin: .4rem auto;
+    
 }
 .foot_form_pagination::after{
-    display: block;
+    display: block;        
+    margin: auto ;
+    content: ' ';
+    width: .7rem;
+    height: .7rem;    
+    border-bottom: 4px double gray;
+    border-left: 4px double gray;        
+    transform: rotate(45deg);
+}
+.foot_form_pagination::before{
+    display: block;    
     margin: auto ;
     content: ' ';
     width: .7rem;
     height: .7rem;
-    border-bottom: 2px solid gray;
-    border-left: 2px solid gray;        
+    border-bottom: 4px double gray;
+    border-left: 4px double gray;        
     transform: rotate(-140deg);
 }
 .radio-pagination-foot:checked + .label-pagination-foot{

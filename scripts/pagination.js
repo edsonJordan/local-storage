@@ -79,7 +79,7 @@ export class Pagination
     }
     /* Add nodechild -- radio and label ---*/
     add_childnode_radio_paginatio(node, array, child, attibute, type, name){
-    const fragment = document.createDocumentFragment()
+    const fragment = document.createDocumentFragment()                        
         for(const date of array){        
             const nodechild = document.createElement(child);
             const nodelabel = document.createElement('label');
@@ -125,8 +125,7 @@ export class Pagination
            this.set_paremeters_paginate(parseInt(e.target.value), parseInt(oppsite));
         }else{
             this.set_paremeters_paginate(parseInt(oppsite), parseInt(e.target.value));
-        }   
-       
+        }          
         if(e.target.name === 'group_header'){
         this.clear_node('foot_form_pagination');
         /*console.log(e.target.value);
@@ -139,6 +138,9 @@ export class Pagination
         //console.log(array_footer_paginate);
         const form_pagination__footer = this.get_id('foot_form_pagination');               
         this.add_childnode_radio_paginatio(form_pagination__footer, array_footer_paginate, "input", 'value', 'radio', 'group-pagination');        
+        const first_pagination = this.get_id('radio-pagination-foot-1');
+        /* Action first radio footer checked */
+        first_pagination.click(); 
         }else{
         //clear node
         this.clear_node('table_tbody');
@@ -148,8 +150,8 @@ export class Pagination
         const arraycleaned = this.clear_array_search(parameters.header, parameters.footer);                
         // add cards
         this.add_child_grandchild(arraycleaned, 'table_tbody', 'tr', 'tr__tbody', 'td', 'td__tbody'); 
-        }        
-                                
+        } 
+     
         })
     }
     /* Search radio checked from radio group */
