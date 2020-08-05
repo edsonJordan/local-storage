@@ -33,17 +33,16 @@ body{
 /* Table */
 .table{
     display: block;    
-    margin: .9rem auto;    
-    
+    margin: .9rem auto;        
     width: 195px;
     max-height: 260px;
-    overflow-x: auto;
-    
-    
+    overflow: hidden;  
+    overflow-x: scroll;      
+        
 }
 .table__tbody{
     display: flex;                
-
+    
 }
 
 .tr__tbody{    
@@ -129,6 +128,26 @@ body{
 .foot_form_pagination{
     display: inline-flex;            
     margin-bottom: 1.5rem;    
+}
+.foot_form_pagination::before{
+    display: block;
+    margin: auto ;
+    content: ' ';
+    width: .7rem;
+    height: .7rem;
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;        
+    transform: rotate(45deg);
+}
+.foot_form_pagination::after{
+    display: block;
+    margin: auto ;
+    content: ' ';
+    width: .7rem;
+    height: .7rem;
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;        
+    transform: rotate(-140deg);
 }
 .radio-pagination-foot:checked + .label-pagination-foot{
     background-color: gray;
