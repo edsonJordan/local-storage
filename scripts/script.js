@@ -47,9 +47,11 @@ const array_cards=
 {codigo: 33, deporte: 'futbol', fecha :'01/04/2020'}, 
 {codigo: 34, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 35, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 36, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 37, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 38, deporte: 'beisbol', fecha :'01/04/2020'}, 
-{codigo: 39, deporte: 'boley', fecha :'01/04/2020'}]
+{codigo: 39, deporte: 'beisbol', fecha :'01/04/2020'}, 
+{codigo: 40, deporte: 'boley', fecha :'01/04/2020'}]
 /* Setting array for set_data */
 class_pagination.set_data(array_cards);
 class_pagination.set_count_array(array_cards);
