@@ -65,7 +65,8 @@ first_pagination_header.checked = true;
 /* GET ID first radio and  add attribute check in footer */
 const first_pagination = class_pagination.get_id('radio-pagination-foot-1');
 /* Action first radio footer checked */
-first_pagination.checked = true;
+//first_pagination.checked = true;
+first_pagination.click();
 /* Firt listener group header and footer */
 class_pagination.set_paremeters_paginate(parseInt(class_pagination.search_checked_radio('group_header')), parseInt(class_pagination.search_checked_radio('group_footer')));
 /*Event Listener group radio header  */
