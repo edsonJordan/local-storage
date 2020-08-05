@@ -130,9 +130,7 @@ export class Pagination
         this.clear_node('foot_form_pagination');
         /*console.log(e.target.value);*/
         //console.log(Math.ceil(parseInt(this.get_count_array().length)/ (e.target.value)));                        
-        let array_footer_paginate = [];
-        console.log(e.target.value);
-        
+        let array_footer_paginate = [];                
         for(let i = 1; i <= Math.ceil(parseInt(this.get_count_array().length)/ (e.target.value)) ; i++){                        
             array_footer_paginate.push(i)
         }
