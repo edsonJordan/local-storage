@@ -1,5 +1,5 @@
 /* Herencia Pagination */
-import {Pagination} from "/pagination.js";
+import {Pagination} from "pagination";
 const class_pagination = new Pagination();
 /* Getting id from calendary__view */
 const calendary_search = class_pagination.get_id('calendary__view');
