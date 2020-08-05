@@ -61,7 +61,6 @@ class_pagination.add_childnode_radio_paginatio(form_pagination__footer, array_pa
 const first_pagination_header = class_pagination.get_id('radio_five');          
 /* Action first radio header  checked */
 first_pagination_header.checked = true;
-
 /* GET ID first radio and  add attribute check in footer */
 const first_pagination = class_pagination.get_id('radio-pagination-foot-1');
 /* Action first radio footer checked */
