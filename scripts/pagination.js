@@ -118,7 +118,7 @@ export class Pagination
         nodefirst.appendChild(fragment);
     }
     /* Listener Group radio */
-    listener_radio(id_listener, name_opposite_form, boolean){
+     listener_radio(id_listener, name_opposite_form, boolean){
         id_listener.addEventListener('change', (e)=>{
         const oppsite = this.search_checked_radio(name_opposite_form);
         if(boolean){
@@ -130,9 +130,7 @@ export class Pagination
         this.clear_node('foot_form_pagination');
         /*console.log(e.target.value);*/
         //console.log(Math.ceil(parseInt(this.get_count_array().length)/ (e.target.value)));                        
-        let array_footer_paginate = [];
-        console.log(e.target.value);
-        
+        let array_footer_paginate = [];                
         for(let i = 1; i <= Math.ceil(parseInt(this.get_count_array().length)/ (e.target.value)) ; i++){                        
             array_footer_paginate.push(i)
         }
@@ -173,4 +171,5 @@ export class Pagination
         let arraycleaned = arraydirty.slice(start, end);
         return arraycleaned;       
     }
+    
 }

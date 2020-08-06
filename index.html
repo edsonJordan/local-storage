@@ -10,27 +10,27 @@
 <body>
     <div class="container-calendary">
         <div class="content-calendary">            
-            <div class="calendary__input none">
+            <div class="calendary__input ">
                 <h1 class="h1__input">Ingrese la actividad</h1>
                 <form action="" method="post" id="form">
                     <div class="input__content">
                         <label for="" class="input-label">
                             Ingresa actividad
                         </label>
-                        <input type="text" class="input input__text" name="actividad" >
-                    </div>
+                        <input type="text" class="input input__text" id="actividad" name="actividad" >
+                    </div>                    
                     <div class="input__content">
                         <label for="" class="input-label">
                             Ingresa Fecha
                         </label>
-                        <input type="datetime-local" class="input input__date" name="actividad" >                                                
+                        <input type="datetime-local" class="input input__date" id="fecha" name="actividad" >                                                
                     </div>
                     <div class="input__content">
-                        <input type="submit" class="input input__submit" value="Eviar">
+                        <input type="submit" class="input input__submit" max="" id="submit" value="Eviar">
                     </div>
                 </form>
             </div>
-            <div class="calendary__view" id="calendary__view" >
+            <div class="calendary__view none" id="calendary__view" >
                 <h1 class="h1__input">Busca tu actividad</h1> 
                 <div class="input__content">
                     <label for="" class="input-label">
