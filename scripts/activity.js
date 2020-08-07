@@ -18,28 +18,8 @@ class Activity
 }
 export class Builderactivity{
     constructor(){     
-        this.setInstaBuilder()
-        
-        this.settingsObject = {
-            'background': '#fffff',
-            'version' : '2.1'
-        }
-        this.getInstaBuilder();
-    }
-    getInstaBuilder(){
-        this.activity= new Activity();
-        return Builderactivity.instance = this;
-    }
-    setInstaBuilder(){
-        if(Builderactivity.instance instanceof Builderactivity){
-            return Builderactivity.instance;
-        }
-    }
-    
-
-    /* get instActivity(){
         this.activity = new Activity();
-    } */
+    }   
     setActivity(actividad){
         this.activity.setActivity=actividad;
         return this;
