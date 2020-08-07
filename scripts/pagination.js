@@ -118,7 +118,7 @@ export class Pagination
         nodefirst.appendChild(fragment);
     }
     /* Listener Group radio */
-    listener_radio(id_listener, name_opposite_form, boolean){
+     listener_radio(id_listener, name_opposite_form, boolean){
         id_listener.addEventListener('change', (e)=>{
         const oppsite = this.search_checked_radio(name_opposite_form);
         if(boolean){
@@ -171,4 +171,5 @@ export class Pagination
         let arraycleaned = arraydirty.slice(start, end);
         return arraycleaned;       
     }
+    
 }
