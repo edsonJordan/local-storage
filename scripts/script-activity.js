@@ -16,7 +16,9 @@ form.addEventListener('submit', (e)=> {
                         .setInputform("form")
                         .setValform('form')
                         .setActivity(actividad.value)
-                        .build();                                                              
+                        .build();      
+        console.log(procedure.getValform);
+                                                              
         localStorage.setItem('prueba', JSON.stringify(procedure.getValform))
                                             
     }
