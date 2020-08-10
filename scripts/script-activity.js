@@ -16,11 +16,17 @@ form.addEventListener('submit', (e)=> {
                         .setInputform("form")
                         .setValform('form')
                         .setActivity(actividad.value)
-                        .build();      
-        console.log(procedure.getValform);
-                                                              
-        localStorage.setItem('prueba', JSON.stringify(procedure.getValform))
-                                            
+                        .build();  
+        //console.log(procedure.getValform);                                                              
+        let getlocal= JSON.parse(localStorage.getItem('prueba'));                                
+        if(getlocal === null){
+            localStorage.setItem('prueba', JSON.stringify([procedure.getValform])) 
+        }else{
+            getlocal.push(procedure.getValform)                            
+            localStorage.setItem('prueba', JSON.stringify(getlocal))
+            location.reload();
+        }                                                                       
+        procedure.clearInput();
     }
 })
 

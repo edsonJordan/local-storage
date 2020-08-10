@@ -10,7 +10,8 @@ const form_pagination__header = class_pagination.get_id('table_pagination');
 const form_pagination__footer = class_pagination.get_id('foot_form_pagination');
 /* Get id pagination first */
 const array_pagination = [1, 2, 3, 4, 5];
-const array_cards= 
+let array_cards = JSON.parse(localStorage.getItem('prueba'));
+/* const array_cards= 
 [
 {codigo: 1, deporte: 'gimnasia', fecha :'02/04/2020'}, 
 {codigo: 2, deporte: 'baloncesto', fecha :'01/04/2020'}, 
@@ -52,7 +53,7 @@ const array_cards=
 {codigo: 38, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 39, deporte: 'beisbol', fecha :'01/04/2020'}, 
 {codigo: 40, deporte: 'boley', fecha :'01/04/2020'}
-]
+] */
 /* Setting array for set_data */
 class_pagination.set_data(array_cards);
 class_pagination.set_count_array(array_cards);
