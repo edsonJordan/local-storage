@@ -131,7 +131,7 @@ export class Pagination
         /*console.log(e.target.value);*/
         //console.log(Math.ceil(parseInt(this.get_count_array().length)/ (e.target.value)));                        
         let array_footer_paginate = [];                
-        for(let i = 1; i <= Math.ceil(parseInt(this.get_count_array().length)/ (e.target.value)) ; i++){                        
+        for(let i = 1; i <= Math.ceil(parseInt(this.get_count_array().length)/(e.target.value)) ; i++){                        
             array_footer_paginate.push(i)
         }
         //console.log(array_footer_paginate);
@@ -149,8 +149,7 @@ export class Pagination
         const arraycleaned = this.clear_array_search(parameters.header, parameters.footer);                
         // add cards
         this.add_child_grandchild(arraycleaned, 'table_tbody', 'tr', 'tr__tbody', 'td', 'td__tbody'); 
-        } 
-     
+        }      
         })
     }
     /* Search radio checked from radio group */
@@ -166,10 +165,9 @@ export class Pagination
     /* Autoload for parameters of checks header and footer  */
     clear_array_search(header, footer){        
         let arraydirty = this.get_data();        
-        let end = footer * header;
         let start = header * (footer-1);
+        let end = footer * header;        
         let arraycleaned = arraydirty.slice(start, end);
         return arraycleaned;       
-    }
-    
+    }    
 }
