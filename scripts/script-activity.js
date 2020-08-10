@@ -21,6 +21,7 @@ form.addEventListener('submit', (e)=> {
         let getlocal= JSON.parse(localStorage.getItem('prueba'));                                
         if(getlocal === null){
             localStorage.setItem('prueba', JSON.stringify([procedure.getValform])) 
+            location.reload();
         }else{
             getlocal.push(procedure.getValform)                            
             localStorage.setItem('prueba', JSON.stringify(getlocal))
