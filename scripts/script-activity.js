@@ -36,11 +36,17 @@ form.addEventListener('submit', (e)=> {
 })
 /* Display modals */
 document.getElementById("calendary-modal").addEventListener("click", (e)=>{
-    const modal= document.getElementsByClassName("modal");
-    for (let mod of modal) {
-        mod.classList.add("none");                
+    
+    
+    const event = e.target;
+    if(event.id === "calendary-modal"){        
+        const modal= document.getElementsByClassName("modal");
+        for (let mod of modal) {
+            mod.classList.add("none");                
+        }
+        document.getElementById("calendary-modal").classList.add("none");      
     }
-    document.getElementById("calendary-modal").classList.add("none")    
+    
 })
 
 document.getElementById("table_tbody").addEventListener('click', (e)=>{
