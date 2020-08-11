@@ -49,6 +49,7 @@ body{
     margin: .9rem auto;
     max-width: 60%;
     outline: none;
+    background-color: white;
     border: .1em solid #2BBBAD;
     border-radius: .5rem;
     padding: .5rem;
