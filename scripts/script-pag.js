@@ -10,7 +10,7 @@ const form_pagination__header = class_pagination.get_id('table_pagination');
 const form_pagination__footer = class_pagination.get_id('foot_form_pagination');
 /* Get id pagination first */
 const array_pagination = [1, 2, 3, 4, 5];
-let array_cards = JSON.parse(localStorage.getItem('prueba'));
+let array_cards = JSON.parse(localStorage.getItem('local'));
 /* const array_cards= 
 [
 {codigo: 1, deporte: 'gimnasia', fecha :'02/04/2020'}, 

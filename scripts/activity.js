@@ -35,7 +35,7 @@ class Activity{
         }
     }
     get getValform(){
-        let obj= {};
+        let obj= {};                
         for(let val of this.values){
             obj[Object.entries(val)[0][0]] = Object.entries(val)[0][1];
         }

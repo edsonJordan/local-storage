@@ -14,16 +14,17 @@
             <div class="content-modal">
                 <form id="form-update" class="form_modal">
                     <div class="input__content">
+                        <input type="hidden"  class="input input__text" id="modal-codigo"  name="Mcodigo" >
                         <label for="" class="input-label">
                              actividad
                         </label>
-                        <input type="text" class="input input__text" id="modal-actividad"  name="modal-deporte" >
+                        <input type="text" class="input input__text" id="modal-actividad"  name="Mdeporte" >
                     </div>
                     <div class="input__content">
                         <label for="" class="input-label">
                              Fecha
                         </label>
-                        <input type="datetime-local" class="input input__date" id="modal-fecha"  name="modal-fecha" >                                                
+                        <input type="datetime-local" class="input input__date" id="modal-fecha"  name="Mfecha" >                                                
                     </div>
                     <div class="input__content">
                         <input type="submit" class="button button-default" value="Eviar">
@@ -33,13 +34,13 @@
                 
             </div>                
         </div>
-        <div id="modal-delete" class="modal modal-delete none">            
-            
+        <div id="modal-delete" class="modal modal-delete none">                        
             <label for="" class="modal_label delete">¿Seguro deseas eliminar el datos?</label> 
             <div class="content-modal">
                 <label for=""></label>
                 <i id="data-delete" ></i>                
-                <form id="form-delete" class="form_modal">                    
+                <form id="form-delete" class="form_modal">
+                    <input type="hidden"  class="input input__text" id="modal-codigo-delete"  name="Mcodigo" >                    
                     <div class="input__content">
                         <input type="submit" class="button button-danger" value="Eviar">
                         <!--  <input type="submit" class="input input__submit " value="Eviar">-->

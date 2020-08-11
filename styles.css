@@ -96,14 +96,16 @@ body{
 .table{
     display: block;    
     margin: .9rem auto;        
-    width: 195px;
+    width: 200px;
     max-height: 475px;
     /* max-height: min-content; */
     overflow-y: hidden;
-    overflow-x: scroll;      
+    overflow-x: scroll;    
 }
+
 .table__tbody{
     display: flex;                
+  
 }
 .tr__tbody{    
     display: flex;
@@ -113,6 +115,7 @@ body{
     /* border: .1em solid #D9DBDF; */
     border: 1px solid #2BBBAD;
     padding: 2rem 3rem ;
+  
 }
 .td__tbody::before{
     display: flex;
@@ -121,6 +124,7 @@ body{
     margin-bottom: .5rem;
     margin-top: .8rem;
     color:gray;
+    
 }
 /* Label Pagination */
 .label__pagination{

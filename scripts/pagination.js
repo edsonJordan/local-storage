@@ -122,13 +122,13 @@ export class Pagination
                 updte.setAttribute("operation", "update");                
                 //updte.value=data.fecha                                
                 //updte.value=data.codigo                                
-                updte.value=JSON.stringify({codigo:data.codigo, deporte:data.deporte, fecha: data.fecha })                                
+                updte.value=JSON.stringify({codigo:data.codigo, deporte:data.deporte, fecha: data.fecha, key: array_data.indexOf(data) })                                
                 updte.textContent="Update";
                 updte.classList.add('button', 'button-warning')
                 del.textContent="Delete";
                 del.setAttribute("operation", "delete");  
                 del.classList.add('button', 'button-danger')
-                del.value=JSON.stringify({codigo:data.codigo, deporte:data.deporte, fecha: data.fecha }) 
+                del.value=JSON.stringify({codigo:data.codigo, deporte:data.deporte, fecha: data.fecha, position: [Object.keys(data)] }) 
                 
 
 
