@@ -102,8 +102,8 @@ body{
     height: .8rem;    
     margin-top: .5rem;
     column-gap: .5rem;
-    border-right: 3px solid #03A9F4;;
-    border-bottom: 3px solid #03A9F4;;    
+    border-right: 3px solid #2BBBAD;;
+    border-bottom: 3px solid #2BBBAD;;    
     transform: rotate(45deg) ;    
 }
 /* Radio button display none */
@@ -128,12 +128,12 @@ body{
 , .radio_pagination_ten:checked ~ .label__pagination__ten
 , .radio_pagination_fifty:checked ~ .label__pagination__fifty
 , .radio_pagination_onehundred:checked ~ .label__pagination__onehundred{
-    background-color: #03A9F4;;
-    color: wheat;    
+    background-color: #2BBBAD;;
+    color: white;    
     }
 .label__radio__pagination{
     display: block;    
-    border: 1px solid #03A9F4;;
+    border: 1px solid #2BBBAD;;
     border-radius: 50%;
     padding: .7rem;
     min-width: 1.5em;
