@@ -51,15 +51,21 @@ document.getElementById("calendary-modal").addEventListener("click", (e)=>{
 
 document.getElementById("table_tbody").addEventListener('click', (e)=>{
     const event = e.target;
+    
     if(event.nodeName === "BUTTON" && event.attributes.operation.value === "delete"){
-       // console.log("es delete");        
-       
+       // console.log("es delete");               
        document.getElementById("calendary-modal").classList.remove("none");
        document.getElementById("modal-delete").classList.remove("none");
+       let data=JSON.parse(event.value);
+       document.getElementById("data-delete").textContent=
+       `Se eliminaran todos los datos permanentes de ${data.codigo} y ${data.deporte} con fecha ${data.fecha}`;              
     }else if(event.nodeName === "BUTTON" && event.attributes.operation.value === "update"){
         //console.log("es update");      
         document.getElementById("calendary-modal").classList.remove("none");
-       document.getElementById("modal-update").classList.remove("none");
+       document.getElementById("modal-update").classList.remove("none");              
+       let data=JSON.parse(event.value);
+       document.getElementById("modal-actividad").value=data.deporte
+       document.getElementById("modal-fecha").value=data.fecha
     }
     
         

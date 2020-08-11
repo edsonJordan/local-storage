@@ -120,15 +120,15 @@ export class Pagination
                 const del = document.createElement("button")
                                                              
                 updte.setAttribute("operation", "update");                
-                updte.value=data.codigo                                
-            
+                //updte.value=data.fecha                                
+                //updte.value=data.codigo                                
+                updte.value=JSON.stringify({codigo:data.codigo, deporte:data.deporte, fecha: data.fecha })                                
                 updte.textContent="Update";
                 updte.classList.add('button', 'button-warning')
-
                 del.textContent="Delete";
                 del.setAttribute("operation", "delete");  
                 del.classList.add('button', 'button-danger')
-                del.value=data.codigo
+                del.value=JSON.stringify({codigo:data.codigo, deporte:data.deporte, fecha: data.fecha }) 
                 
 
 
