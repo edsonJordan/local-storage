@@ -34,6 +34,30 @@ form.addEventListener('submit', (e)=> {
         procedure.clearInput();
     }
 })
+/* Display modals */
+document.getElementById("calendary-modal").addEventListener("click", (e)=>{
+    const modal= document.getElementsByClassName("modal");
+    for (let mod of modal) {
+        mod.classList.add("none");                
+    }
+    document.getElementById("calendary-modal").classList.add("none")    
+})
+
+document.getElementById("table_tbody").addEventListener('click', (e)=>{
+    const event = e.target;
+    if(event.nodeName === "BUTTON" && event.attributes.operation.value === "delete"){
+       // console.log("es delete");        
+       
+       document.getElementById("calendary-modal").classList.remove("none");
+       document.getElementById("modal-delete").classList.remove("none");
+    }else if(event.nodeName === "BUTTON" && event.attributes.operation.value === "update"){
+        //console.log("es update");      
+        document.getElementById("calendary-modal").classList.remove("none");
+       document.getElementById("modal-update").classList.remove("none");
+    }
+    
+        
+})
 
 
 

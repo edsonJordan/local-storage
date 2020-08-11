@@ -8,8 +8,46 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="calendary-modal"class="calendary-modal none">
+        <div id="modal-update" class="modal modal-update none">                
+            <label for="" class="modal_label update">Formulario de actualización</label>            
+            <div class="content-modal">
+                <form id="form-update" class="form_modal">
+                    <div class="input__content">
+                        <label for="" class="input-label">
+                             actividad
+                        </label>
+                        <input type="text" class="input input__text" id="modal-actividad"  name="modal-deporte" >
+                    </div>
+                    <div class="input__content">
+                        <label for="" class="input-label">
+                             Fecha
+                        </label>
+                        <input type="datetime-local" class="input input__date" id="modal-fecha"  name="modal-fecha" >                                                
+                    </div>
+                    <div class="input__content">
+                        <input type="submit" class="button button-default" value="Eviar">
+                        <!--  <input type="submit" class="input input__submit " value="Eviar">-->
+                    </div>
+                </form>
+                
+            </div>                
+        </div>
+        <div id="modal-delete" class="modal modal-delete none">            
+            <label for="" class="modal_label delete">¿Seguro deseas eliminar el dato?</label>
+            <div class="content-modal">
+                Los datos se van a eliminar permanentemente
+                <form id="form-delete" class="form_modal">                    
+                    <div class="input__content">
+                        <input type="submit" class="button button-danger" value="Eviar">
+                        <!--  <input type="submit" class="input input__submit " value="Eviar">-->
+                    </div>
+                </form>
+            </div>                                                
+        </div>
+    </div> 
     <div class="container-calendary">
-        <div class="content-calendary">            
+        <div class="content-calendary">                       
             <div class="calendary__input ">
                 <h1 class="h1__input">Ingrese la actividad</h1>
                 <form action="" method="post" id="form">
@@ -29,8 +67,7 @@
                         <input type="submit" class="button button-default" value="Eviar">
                         <!--  <input type="submit" class="input input__submit " value="Eviar">-->
                     </div>
-                </form>
-                                
+                </form>                                
             </div>
             <div class="calendary__view " id="calendary__view" >
                 <h1 class="h1__input">Busca tu actividad</h1> 
