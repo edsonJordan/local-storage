@@ -49,7 +49,7 @@ body{
     margin: .9rem auto;
     max-width: 60%;
     outline: none;
-    border: .1em solid #D9DBDF;
+    border: .1em solid #2BBBAD;
     border-radius: .5rem;
     padding: .5rem;
     font-size: .9rem;
@@ -60,7 +60,8 @@ body{
     display: block;    
     margin: .9rem auto;        
     width: 195px;
-    max-height: 275px;
+    max-height: 475px;
+    /* max-height: min-content; */
     overflow-y: hidden;
     overflow-x: scroll;      
         
@@ -72,11 +73,11 @@ body{
 
 .tr__tbody{    
     display: flex;
-    flex-direction: column;      
+    flex-direction: column;              
     border-radius: 15px;
     margin: .5rem .8rem;    
     /* border: .1em solid #D9DBDF; */
-    border: 1px solid gray;
+    border: 1px solid #2BBBAD;
     padding: 2rem 3rem ;
 }
 .td__tbody::before{
@@ -101,8 +102,8 @@ body{
     height: .8rem;    
     margin-top: .5rem;
     column-gap: .5rem;
-    border-right: 3px solid gray;
-    border-bottom: 3px solid gray;    
+    border-right: 3px solid #03A9F4;;
+    border-bottom: 3px solid #03A9F4;;    
     transform: rotate(45deg) ;    
 }
 /* Radio button display none */
@@ -127,12 +128,12 @@ body{
 , .radio_pagination_ten:checked ~ .label__pagination__ten
 , .radio_pagination_fifty:checked ~ .label__pagination__fifty
 , .radio_pagination_onehundred:checked ~ .label__pagination__onehundred{
-    background-color: gray;
+    background-color: #03A9F4;;
     color: wheat;    
     }
 .label__radio__pagination{
     display: block;    
-    border: 1px solid gray;
+    border: 1px solid #03A9F4;;
     border-radius: 50%;
     padding: .7rem;
     min-width: 1.5em;
@@ -172,8 +173,8 @@ body{
     content: ' ';
     width: .7rem;
     height: .7rem;    
-    border-bottom: 4px double gray;
-    border-left: 4px double gray;        
+    border-bottom: 4px double #03A9F4;;
+    border-left: 4px double #03A9F4;;        
     transform: rotate(45deg);
 }
 .foot_form_pagination::before{
@@ -182,12 +183,12 @@ body{
     content: ' ';
     width: .7rem;
     height: .7rem;
-    border-bottom: 4px double gray;
-    border-left: 4px double gray;        
+    border-bottom: 4px double #03A9F4;;
+    border-left: 4px double #03A9F4;;        
     transform: rotate(-140deg);
 }
 .radio-pagination-foot:checked + .label-pagination-foot{
-    background-color: gray;
+    background-color: #03A9F4;;
     color: white;
 }
 .radio-pagination-foot{
@@ -197,9 +198,47 @@ body{
     margin: .4em;
     padding: .3em;
     color: gray;
-    border:1px solid gray;
+    border:1px solid #03A9F4;;
 }
 
 .label-pagination-foot.active{
+    
+}
+
+/* Buttons */
+.button{    
+    line-height: 2rem;    
+    display: inline-block;
+    text-decoration: none;   
+    text-align: center;
+    letter-spacing: .8px;    
+    font-size: 1rem;
+    border-radius: 2px;
+    min-width: 5rem;
+    margin: .4rem 0;
+    border: none;   
+    outline: none;    
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.button-default:focus{
+    background-color: #5a95f5 ;
+}
+.button-warning:focus{
+    background-color: #ff6a3c 
+}
+.button-danger:focus{
+    background-color: #d74444 
+}
+.button-default{
+    color: #fff;
+    background-color: #4285F4;
+}
+.button-warning{
+    color: #fff;
+    background-color: #FF5722; 
+}
+.button-danger{
+    color: #fff;
+    background-color: #ff4444;
     
 }

@@ -4,7 +4,11 @@ const activity = new Builderactivity()
                     .setFecha("10/10/2020")
                     .build();                                       
 /* console.log(activity.getActivity);
-console.log(activity.getFecha);*/                                  
+console.log(activity.getFecha);*/         
+/* document.getElementById("btn-form").addEventListener('click', (e)=>{
+    document.getElementById("form").submit();
+    e.preventDefault();
+})      */                     
 form.addEventListener('submit', (e)=> {
     e.preventDefault();
     let actividad= document.getElementById("actividad"), fecha= document.getElementById("fecha");        

@@ -109,11 +109,37 @@ export class Pagination
             for(const key of Object.entries(data)){
                 const nodegrandchild = document.createElement(grand_child);
                 nodegrandchild.classList.add(class_grandchild);
-                nodegrandchild.setAttribute('data-titulo', key[0]);
+                nodegrandchild.setAttribute('data-titulo', key[0]);                
                 nodegrandchild.textContent= key[1];
                 nodechild.appendChild(nodegrandchild);
             }
-            fragment.appendChild(nodechild);
+                const tdOperation=document.createElement("TD")
+                tdOperation.classList.add(class_grandchild)
+                tdOperation.setAttribute('data-titulo', "Operaciones"); 
+                const updte = document.createElement("button")
+                const del = document.createElement("button")
+                                                             
+                updte.setAttribute("operation", "update");                
+                updte.value=data.codigo                                
+            
+                updte.textContent="Update";
+                updte.classList.add('button', 'button-warning')
+
+                del.textContent="Delete";
+                del.setAttribute("operation", "delete");  
+                del.classList.add('button', 'button-danger')
+                del.value=data.codigo
+                
+
+
+
+                tdOperation.appendChild(del)
+                tdOperation.appendChild(updte)
+
+                nodechild.appendChild(tdOperation);
+                
+                
+                fragment.appendChild(nodechild);
         }
         nodefirst.appendChild(fragment);
     }
