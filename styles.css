@@ -173,8 +173,8 @@ body{
     content: ' ';
     width: .7rem;
     height: .7rem;    
-    border-bottom: 4px double #03A9F4;;
-    border-left: 4px double #03A9F4;;        
+    border-bottom: 4px double #2BBBAD;;
+    border-left: 4px double #2BBBAD;;        
     transform: rotate(45deg);
 }
 .foot_form_pagination::before{
@@ -183,12 +183,12 @@ body{
     content: ' ';
     width: .7rem;
     height: .7rem;
-    border-bottom: 4px double #03A9F4;;
-    border-left: 4px double #03A9F4;;        
+    border-bottom: 4px double #2BBBAD;
+    border-left: 4px double #2BBBAD;        
     transform: rotate(-140deg);
 }
 .radio-pagination-foot:checked + .label-pagination-foot{
-    background-color: #03A9F4;;
+    background-color: #2BBBAD;
     color: white;
 }
 .radio-pagination-foot{
@@ -198,7 +198,7 @@ body{
     margin: .4em;
     padding: .3em;
     color: gray;
-    border:1px solid #03A9F4;;
+    border:1px solid #2BBBAD;
 }
 
 .label-pagination-foot.active{
